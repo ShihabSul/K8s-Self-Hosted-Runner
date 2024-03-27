@@ -1,3 +1,0 @@
-export PATH
-PS1='\u@\h:\w\$ '
-alias ll="ls -l --color=always"

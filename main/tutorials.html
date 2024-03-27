@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tutorials &#8212; PandABlocks-rootfs-docs 0.1.dev6+gbcde4bb documentation</title>
+    <title>Getting a PandA on the network &#8212; PandABlocks-rootfs-docs 0.1.dev7+g7a1ba1b documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=1ee86dd7"></script>
+    <script src="_static/documentation_options.js?v=c564177e"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -152,7 +152,7 @@
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Tutorials
+                        Getting a PandA on the network
                       </a>
                     </li>
                 
@@ -313,7 +313,7 @@ document.write(`
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Tutorials
+                        Getting a PandA on the network
                       </a>
                     </li>
                 
@@ -459,7 +459,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Tutorials</li>
+    <li class="breadcrumb-item active" aria-current="page">Getting a...</li>
   </ul>
 </nav>
 </div>
@@ -476,9 +476,43 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="tutorials">
-<h1>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">#</a></h1>
-<p>Tutorials for installation and typical usage. New users start here.</p>
+  <section id="getting-a-panda-on-the-network">
+<h1>Getting a PandA on the network<a class="headerlink" href="#getting-a-panda-on-the-network" title="Link to this heading">#</a></h1>
+<p>The SD card inside a PandA contains a config.txt file that allows control of networking and other configuration settings</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file contains configuration settings.  In this file network and other</span>
+<span class="c1"># settings can be adjusted.</span>
+
+<span class="c1"># If ADDRESS and NETMASK are not both specified DHCP will be used instead.</span>
+<span class="c1"># The ADDRESS field can be set to a four part dotted IP address followed by a</span>
+<span class="c1"># network mask specification thus:</span>
+<span class="c1">#</span>
+<span class="c1">#   ADDRESS = 172.23.252.202</span>
+<span class="c1">#   NETMASK = 255.255.240.0</span>
+
+<span class="c1"># If the ADDRESS field has been set then the GATEWAY and DNS fields should be</span>
+<span class="c1"># set:</span>
+<span class="c1">#</span>
+<span class="c1">#   GATEWAY = 172.23.240.254</span>
+<span class="c1">#   DNS = 172.23.5.13 172.23.4.1 130.246.8.13</span>
+
+<span class="c1"># Optionally the DNS search domain can be set:</span>
+<span class="c1">#</span>
+<span class="c1">#   DNS_SEARCH = diamond.ac.uk</span>
+
+<span class="c1"># The NTP server or servers can be specified here:</span>
+<span class="c1">#</span>
+<span class="c1">#   NTP = 172.23.240.2 172.23.199.1</span>
+
+<span class="c1"># The machine hostname can be specified here:</span>
+<span class="c1">#</span>
+<span class="c1">#   HOSTNAME = panda</span>
+
+<span class="c1"># To skip loading any zpackages at startup, either for testing or as an</span>
+<span class="c1"># override to recover from a faulty zpkg install:</span>
+<span class="c1">#</span>
+<span class="c1">#   NO_ZPKG</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/installation.html">Installation</a></li>

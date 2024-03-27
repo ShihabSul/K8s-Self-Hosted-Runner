@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Getting a PandA on the network &#8212; PandABlocks-rootfs-docs 0.1.dev13+g48bb2d9 documentation</title>
+    <title>Tutorials &#8212; PandABlocks-rootfs-docs 0.1.dev20+gcb976db documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=84ca3c28"></script>
+    <script src="_static/documentation_options.js?v=ad030f11"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -54,7 +54,7 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="tutorials/installation.html" />
+    <link rel="next" title="Getting a PandA on the network" href="tutorials/quickstart.html" />
     <link rel="prev" title="PandABlocks-rootfs" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,7 +152,7 @@
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Getting a PandA on the network
+                        Tutorials
                       </a>
                     </li>
                 
@@ -313,7 +313,7 @@ document.write(`
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        Getting a PandA on the network
+                        Tutorials
                       </a>
                     </li>
                 
@@ -421,7 +421,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="tutorials/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/quickstart.html">Getting a PandA on the network</a></li>
 </ul>
 </div>
 </nav></div>
@@ -459,7 +459,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Getting a...</li>
+    <li class="breadcrumb-item active" aria-current="page">Tutorials</li>
   </ul>
 </nav>
 </div>
@@ -476,53 +476,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="getting-a-panda-on-the-network">
-<h1>Getting a PandA on the network<a class="headerlink" href="#getting-a-panda-on-the-network" title="Link to this heading">#</a></h1>
-<p>The SD card inside a PandA contains a config.txt file that allows control of networking and other configuration settings</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This file contains configuration settings.  In this file network and other</span>
-<span class="c1"># settings can be adjusted.</span>
-
-<span class="c1"># If ADDRESS and NETMASK are not both specified DHCP will be used instead.</span>
-<span class="c1"># The ADDRESS field can be set to a four part dotted IP address followed by a</span>
-<span class="c1"># network mask specification thus:</span>
-<span class="c1">#</span>
-<span class="c1">#   ADDRESS = 172.23.252.202</span>
-<span class="c1">#   NETMASK = 255.255.240.0</span>
-
-<span class="c1"># If the ADDRESS field has been set then the GATEWAY and DNS fields should be</span>
-<span class="c1"># set:</span>
-<span class="c1">#</span>
-<span class="c1">#   GATEWAY = 172.23.240.254</span>
-<span class="c1">#   DNS = 172.23.5.13 172.23.4.1 130.246.8.13</span>
-
-<span class="c1"># Optionally the DNS search domain can be set:</span>
-<span class="c1">#</span>
-<span class="c1">#   DNS_SEARCH = diamond.ac.uk</span>
-
-<span class="c1"># The NTP server or servers can be specified here:</span>
-<span class="c1">#</span>
-<span class="c1">#   NTP = 172.23.240.2 172.23.199.1</span>
-
-<span class="c1"># The machine hostname can be specified here:</span>
-<span class="c1">#</span>
-<span class="c1">#   HOSTNAME = panda</span>
-
-<span class="c1"># To skip loading any zpackages at startup, either for testing or as an</span>
-<span class="c1"># override to recover from a faulty zpkg install:</span>
-<span class="c1">#</span>
-<span class="c1">#   NO_ZPKG</span>
-</pre></div>
-</div>
-<p>During startup the network will be configured as follows:</p>
-<ul class="simple">
-<li><p>If <code class="docutils literal notranslate"><span class="pre">ADDRESS</span></code> and <code class="docutils literal notranslate"><span class="pre">NETMASK</span></code> are set then a static IP will be assigned, and the remaining keys should also be set. Additionally, <code class="docutils literal notranslate"><span class="pre">NTP</span></code> can be set to specify a list of <code class="docutils literal notranslate"><span class="pre">NTP</span></code> servers.</p></li>
-<li><p>Otherwise <code class="docutils literal notranslate"><span class="pre">DHCP</span></code> will be attempted. If successful this will assign the <code class="docutils literal notranslate"><span class="pre">IP</span></code> address, gateway and <code class="docutils literal notranslate"><span class="pre">DNS</span></code> settings, and may assign hostname. If the <code class="docutils literal notranslate"><span class="pre">DHCP</span></code> server provides the <code class="docutils literal notranslate"><span class="pre">NTP</span></code> option, it will be used to set the <code class="docutils literal notranslate"><span class="pre">NTP</span></code> servers. This will take priority over the <code class="docutils literal notranslate"><span class="pre">NTP</span></code> parameter.</p></li>
-<li><p>If DCHP fails then “ZeroConf” is attempted. If this also fails then PandA will not be reachable on the network.</p></li>
-</ul>
-<p>Note that in the default configuration PandA will attempt to contact NTP servers at <code class="docutils literal notranslate"><span class="pre">0.pool.ntp.org</span></code> etc.</p>
+  <section id="tutorials">
+<h1>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/quickstart.html">Getting a PandA on the network</a></li>
 </ul>
 </div>
 </section>
@@ -547,11 +505,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="tutorials/installation.html"
+       href="tutorials/quickstart.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installation</p>
+        <p class="prev-next-title">Getting a PandA on the network</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

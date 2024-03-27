@@ -47,6 +47,7 @@ Note that in the default configuration PandA will attempt to contact NTP servers
 ```{toctree}
 :maxdepth: 1
 :glob:
+:hidden:
 
 PandA-on-Network/*
 ```

@@ -9,8 +9,8 @@ PandABlocks-rootfs contains the sources to build the root filesystem that
 will boot Linux on the Zynq module that is the heart of a PandABlocks enabled
 device like PandABox.
 
+Source Code     | <https://github.com/shihab-dls/PandABlocks-rootfs-docs>
 :---:           | :---:
-Source          | <https://github.com/shihab-dls/PandABlocks-rootfs-docs>
 Documentation   | <https://shihab-dls.github.io/PandABlocks-rootfs-docs>
 Changelog       | <https://github.com/shihab-dls/PandABlocks-rootfs-docs/releases>
 

@@ -11,10 +11,8 @@ device like PandABox.
 
 Source          | <https://github.com/shihab-dls/PandABlocks-rootfs-docs>
 :---:           | :---:
-PyPI            | `pip install PandABlocks-rootfs-docs`
-Docker          | `docker run ghcr.io/shihab-dls/PandABlocks-rootfs-docs:latest`
 Documentation   | <https://shihab-dls.github.io/PandABlocks-rootfs-docs>
-Releases        | <https://github.com/shihab-dls/PandABlocks-rootfs-docs/releases>
+Changelog       | <https://github.com/shihab-dls/PandABlocks-rootfs-docs/releases>
 
 <!-- README only content. Anything below this line won't be included in index.md -->
 

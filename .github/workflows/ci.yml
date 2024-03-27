@@ -21,4 +21,5 @@ jobs:
     uses: ./.github/workflows/_release.yml
 
   conainer-release:
+    needs: build
     uses: ./.github/workflows/_container-release.yml

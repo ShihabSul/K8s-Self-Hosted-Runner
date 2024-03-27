@@ -15,7 +15,7 @@ import my_package
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = "PandABlocks-rootfs-docs"
+project = "PandABlocks-rootfs"
 
 # The full version, including alpha/beta/rc tags.
 release = my_package.__version__

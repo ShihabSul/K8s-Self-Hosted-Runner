@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PandABlocks-rootfs &#8212; PandABlocks-rootfs-docs 0.1.dev24+g7abd3f2 documentation</title>
+    <title>PandABlocks-rootfs &#8212; PandABlocks-rootfs 0.1.dev25+gceacd62 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=2c1cfef0"></script>
+    <script src="_static/documentation_options.js?v=00026a6f"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -135,7 +135,7 @@
     <script>document.write(`<img src="_static/PandA-logo-for-black-background.svg" class="logo__image only-dark" alt=""/>`);</script>
   
   
-    <p class="title logo__title">PandABlocks-rootfs-docs</p>
+    <p class="title logo__title">PandABlocks-rootfs</p>
   
 </a></div>
     
@@ -234,7 +234,7 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/PandABlocks-rootfs-docs" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
+          <a href="https://pypi.org/project/PandABlocks-rootfs" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
         </li>
 </ul></div>
@@ -379,7 +379,7 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/PandABlocks-rootfs-docs" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
+          <a href="https://pypi.org/project/PandABlocks-rootfs" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
         </li>
 </ul></div>
@@ -459,6 +459,16 @@ device like PandABox.</p>
 </tr>
 </tbody>
 </table>
+<section id="what-does-the-rootfs-do">
+<h2>What does the rootfs do?<a class="headerlink" href="#what-does-the-rootfs-do" title="Link to this heading">#</a></h2>
+<p>The rootfs is responsible for booting the Zynq, then setting up a number of services on it:</p>
+<ul class="simple">
+<li><p>Bringing up the network as specified in a config.txt file on the SD card</p></li>
+<li><p>Running an SSH server that allows debugging access to those who have their public keys on the PandA</p></li>
+<li><p>Programming the FPGA and running services like the TCP server and Web Control as specified in packages</p></li>
+<li><p>Running a Web Admin server on port 80 that allows ZPG files to allow the installation and removal of packages, and addition of SSH keys from the USB stick</p></li>
+</ul>
+</section>
 <section id="how-the-documentation-is-structured">
 <h2>How the documentation is structured<a class="headerlink" href="#how-the-documentation-is-structured" title="Link to this heading">#</a></h2>
 <p>Documentation is split into four categories, also accessible from links in the top bar.</p>

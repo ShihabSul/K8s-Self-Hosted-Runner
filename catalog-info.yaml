@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: PandABlocks-rootfs-docs
+  title: PandABlocks-rootfs-docs
+  description: Test copier template
+spec:
+  type: documentation
+  lifecycle: experimental
+  owner: group:default/sscc

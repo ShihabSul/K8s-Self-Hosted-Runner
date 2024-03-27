@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier
+_commit: 2.1.0
+_src_path: gh:DiamondLightSource/python-copier-template
+author_email: shihab.suliman@diamond.ac.uk
+author_name: Shihab Suliman
+component_owner: group:default/sscc
+description: Test copier template
+distribution_name: PandABlocks-rootfs-docs
+docker: true
+docs_type: sphinx
+git_platform: github.com
+github_org: shihab-dls
+package_name: my_package
+pypi: true
+repo_name: PandABlocks-rootfs-docs
+type_checker: mypy

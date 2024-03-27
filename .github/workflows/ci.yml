@@ -7,7 +7,7 @@ on:
 jobs:
 
   build-image:
-    uses: ./.github/workflows/_build_image.yml
+    uses: ./.github/workflows/_build-image.yml
 
   build:
     needs: build-image

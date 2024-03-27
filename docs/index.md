@@ -20,6 +20,7 @@ Documentation is split into four categories, also accessible from links in the t
 :::{grid-item-card} {material-regular}`directions_walk;2em`
 ```{toctree}
 :maxdepth: 2
+:hidden:
 tutorials
 ```
 +++
@@ -38,6 +39,7 @@ Practical step-by-step guides for the more experienced user.
 :::{grid-item-card} {material-regular}`info;2em`
 ```{toctree}
 :maxdepth: 2
+:hidden:
 explanations
 ```
 +++
@@ -47,6 +49,7 @@ Explanations of how it works and why it works that way.
 :::{grid-item-card} {material-regular}`menu_book;2em`
 ```{toctree}
 :maxdepth: 2
+:hidden:
 reference
 ```
 +++

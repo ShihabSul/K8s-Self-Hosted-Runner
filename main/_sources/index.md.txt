@@ -20,7 +20,7 @@ Documentation is split into four categories, also accessible from links in the t
 :::{grid-item-card} {material-regular}`directions_walk;2em`
 ```{toctree}
 :maxdepth: 2
-tutorials
+PandA-on-Network
 ```
 +++
 Tutorials for installation and typical usage. New users start here.

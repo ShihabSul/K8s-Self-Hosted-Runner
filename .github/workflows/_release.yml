@@ -2,31 +2,23 @@ on:
   workflow_call:
 
 jobs:
-  artifacts:
+  release:
     runs-on: ubuntu-latest
-
+    # Make a release on every tag
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v2
         with:
-          merge-multiple: true
+          name: zips
+          path: zips
 
-      - name: Zip up docs
-        run: |
-          set -vxeuo pipefail
-          if [ -d html ]; then
-            mv html $GITHUB_REF_NAME
-            zip -r docs.zip $GITHUB_REF_NAME
-            rm -rf $GITHUB_REF_NAME
-          fi
-
-      - name: Create GitHub Release
+      - name: Github Release
         # We pin to the SHA, not the tag, for security reasons.
         # https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#using-third-party-actions
-        uses: softprops/action-gh-release@9d7c94cfd0a1f3ed45544c887983e9fa900f0564 # v2.0.4
+        uses: softprops/action-gh-release@2d72d869af3bf23602f9593a1e3fd739b80ac1eb  # v0.1.12
         with:
           prerelease: ${{ contains(github.ref_name, 'a') || contains(github.ref_name, 'b') || contains(github.ref_name, 'rc') }}
-          files: "*"
-          generate_release_notes: true
+          files: zips/*
+          body: See [Changelog](CHANGELOG.rst) for more details
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

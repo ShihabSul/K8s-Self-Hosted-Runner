@@ -3,7 +3,7 @@ requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "PandABlocks-rootfs-docs"
+name = "PandABlocks-rootfs"
 classifiers = [
     "Development Status :: 3 - Alpha",
     "License :: OSI Approved :: Apache Software License",
@@ -39,10 +39,10 @@ dev = [
 ]
 
 [project.scripts]
-PandABlocks-rootfs-docs = "my_package.__main__:main"
+PandABlocks-rootfs = "pandablocks.__main__:main"
 
 [project.urls]
-GitHub = "https://github.com/shihab-dls/PandABlocks-rootfs-docs"
+GitHub = "https://github.com/shihab-dls/PandABlocks-rootfs"
 
 [[project.authors]] # Further authors may be added by duplicating this section
 email = "shihab.suliman@diamond.ac.uk"
@@ -50,7 +50,7 @@ name = "Shihab Suliman"
 
 
 [tool.setuptools_scm]
-write_to = "src/my_package/_version.py"
+write_to = "src/pandablocks/_version.py"
 
 [tool.mypy]
 ignore_missing_imports = true # Ignore missing stubs in imported modules
@@ -66,7 +66,7 @@ filterwarnings = "error"
 testpaths = "docs src tests"
 
 [tool.coverage.run]
-data_file = "/tmp/my_package.coverage"
+data_file = "/tmp/pandablocks.coverage"
 
 [tool.coverage.paths]
 # Tests are run from installed location, map back to the src directory
